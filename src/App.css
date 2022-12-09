@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --size: calc(1vh + 1vw);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* .App {
+  text-align: center;
+} */
+
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: clamp(14px, calc(var(--size)*1.2), 24px);
+  font-weight: 500;
+  text-shadow: 0px 4px 3px rgb(0 0 0 / 40%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-spinner {
+  font-size: 48px;
 }
+
+.App span {
+  display: inline-block;
+  font-size: clamp(18px, calc(var(--size)*1.2), 28px);
+  color: #0014FF;
+  font-weight: bold;
+}
+.imageBox {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.imageBox img {
+  vertical-align: bottom;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  filter: grayscale(100%);
+}
+
+button {
+  margin-top: 40px;
+  padding: 25px 35px;
+  border: none;
+  background: blue;
+  font-size: clamp(18px, calc(var(--size)*1.2), 28px);
+  color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all .2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-7px);
+  color: orange;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
